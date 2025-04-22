@@ -32,7 +32,7 @@ int main(){
     scanf(" %s", cidade_01);                                                           // Pedir pro usuario colocar a Cidade da carta
 
     printf("Entre com a população da cidade: \n");
-    scanf(" %i", &populacao_01);                                                       // Pedir pro usuario colocar a Quantidade populacional da carta
+    scanf(" %i", &populacao_01);                                                      // Pedir pro usuario colocar a Quantidade populacional da carta
 
     printf("Entre com a area da cidade em km2: \n");
     scanf(" %f", &area_01);                                                            // Pedir pro usuario colocar a Area da carta
@@ -145,6 +145,8 @@ int main(){
 
 // Impressão dos dados da primeira carta conforme os dados de entrada que foram pedidos anteriormente
 
+
+    
     printf("ESTADO: %c\n", estado_02);
     printf("Codigo: %c-%i\n", estado_01, cod_carta_02);
     printf("Cidade: %s\n", cidade_02);
@@ -156,6 +158,33 @@ int main(){
     printf("PIB Percapito: %.2f\n\n", pib_percapito_02);
     printf("Super Poder: %.3f\n\n", super_poder_02);
 
+    
 
+    // Comparando os atributos das cartar
+
+    int compara_estado = populacao_01 > populacao_02;
+    int compara_area = area_01 > area_02;
+    int compara_pib = pib_01 > pib_02;
+    int compara_ponto_turistico = pontos_turisticos_01 > pontos_turisticos_02;
+    int compara_densidade_populacional = densidade_populacional_01 > densidade_populacional_02;
+    int compara_pib_percatito = pib_percapito_01 > pib_percapito_02;
+    int compara_super = super_poder_01 > super_poder_02;
+
+    
+
+
+    printf("Primeira carta\n1 ganha com a maior população\n0 perde com menor população\n\nAPontuação: %i\n\n", compara_estado);
+    printf("Primeira carta\n1 ganha com a maior area\n0 perde com menor area\n\nPontuação: %i\n\n", compara_area);
+    printf("Primeira carta\n1 ganha com a maior pib\n0 perde com menor pib\n\nPontuação: %i\n\n", compara_pib);
+    printf("Primeira carta\n1 ganha com a maior numero de pontos turisticos\n0 perde com menor numero de pontos turisticos\n\nPontuação: %i\n\n", compara_ponto_turistico);
+    printf("Primeira carta\n1 ganha com a menor densidade populacional\n0 perde com maior densidade populacional\n\nPontuação: %i\n\n", compara_densidade_populacional);
+    printf("Primeira carta\n1 ganha com a maior pib per capita\n0 perde com menor pib per capita\n\nPontuação: %i\n\n", compara_pib_percatito);
+    printf("Primeira carta\n1 ganha com a maior super poder\n0 perde com menor super poder\n\nPontuação: %i\n\n", compara_super);
+
+
+
+
+
+    return 0;
 
 }
